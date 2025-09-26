@@ -12,7 +12,7 @@ COHERE_API_KEY = os.getenv("COHERE_API_KEY")
 
 
 COHERE_ENABLED = False
-COHERE_MODEL = "command-a-03-2025"  # актуальная модель (проверь через co.models.list())
+COHERE_MODEL = "command-a-03-2025"  # актуальная модель
 
 # Bot configuration
 COMMAND_PREFIX = '!'
@@ -57,7 +57,7 @@ class CohereAI:
             
             response = co.chat(
                 message=text,
-                model=COHERE_MODEL,  # <-- используем актуальную модель
+                model=COHERE_MODEL,  # используем актуальную модель
                 preamble=self._build_preamble(),
                 chat_history=chat_history,
                 temperature=0.8,
